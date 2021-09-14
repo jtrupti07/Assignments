@@ -7,7 +7,7 @@ typedef int BOOL;
 
 BOOL CheckAlpha(char cValue)
 {
-	if(cValue>=97 && cValue<=122)
+	if(cValue>='a' && cValue<='z')
 	{
 		return TRUE;
 	}
