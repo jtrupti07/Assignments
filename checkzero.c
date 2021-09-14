@@ -2,7 +2,7 @@
 #include<stdbool.h>
 #define TRUE 1
 #define FALSE 0
-typedef bool int;
+typedef int bool;
 
 
 bool CheckZero(int iNo)
