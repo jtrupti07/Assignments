@@ -2,6 +2,7 @@
 #include<stdbool.h>
 #define TRUE 1
 #define FALSE 0
+typedef bool int;
 
 
 bool CheckZero(int iNo)
@@ -20,13 +21,17 @@ bool CheckZero(int iNo)
 		iDigit=iNo%10;
 		if(iDigit==0)
 		{
-			return TRUE;
-		}
-		else
-		{
-			return FALSE;
+			break;	//after getting single zero loop should stop it reduces time complexity.
 		}
 		iNo=iNo/10;
+	}
+	if(iNo==0)
+	{
+		return FALSE;	//if whiile loop completes its execution then value of iNo should be 0. it means that number doesn't contain zero.
+	}
+	else
+	{
+		return TRUE;	//if while loop stops its execution due to condition (iDigit==0) then iNo remains grater than zero and that number must conatin zero.
 	}
 }
 
