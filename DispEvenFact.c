@@ -8,7 +8,7 @@ void DisplayEvenFactor(int iNo)
 	{
 		iNo=-iNo;
 	}
-	for(i=1;i<=iNo;i++)
+	for(i=2;i<=iNo/2;i++)	//initialize loop to 2 beacause even numbers stats from 2 and stop loop at iNo/2 cause from iNo/2 onwards there are non factors of iNo(any)
 	{
 		if((i%2)==0 && (iNo%i)==0)
 		{
